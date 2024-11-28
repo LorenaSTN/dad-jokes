@@ -1,0 +1,37 @@
+main {
+  height: 100%;
+}
+
+.card {
+  min-width: 290px;
+  max-width: 500px;
+  height: 55%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  background-color: hsl(207, 87%, 79%);
+  border-radius: 20px;
+  border: 5px outset hsl(207, 87%, 39%);
+}
+
+.card__title {
+  color: hsl(207, 87%, 22%);
+  font-family: "New Amsterdam", sans-serif;
+  font-size: 26px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.card__div {
+  background-color: rgba(255, 255, 255, 0.806);
+  height: 150px;
+  margin: 32px 24px 0px 24px;
+  display: flex;
+  border-radius: 15px;
+  align-items: center;
+  text-align: center;
+}
+
+.card__p {
+  padding: 10px;
+}
