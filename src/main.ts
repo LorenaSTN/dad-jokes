@@ -1,7 +1,10 @@
 (() =>{
 
   const paragraph = document.querySelector(".p-js");
+  const button = document.querySelector(".button-js")
 
+
+  const handleJoke = () =>{
   fetch("https://icanhazdadjoke.com/", {
     headers: {
       Accept: "application/json",
@@ -15,6 +18,13 @@
       }
     })
     .catch((error) => console.error("Error:", error));
-})
+  }
+
+
+    button?.addEventListener("click", handleJoke)
+
+    handleJoke();
+})();
+
 
 

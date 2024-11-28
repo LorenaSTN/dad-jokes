@@ -5,7 +5,7 @@ main {
 .card {
   min-width: 290px;
   max-width: 500px;
-  height: 55%;
+  height: 320px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10%;
@@ -17,21 +17,53 @@ main {
 .card__title {
   color: hsl(207, 87%, 22%);
   font-family: "New Amsterdam", sans-serif;
-  font-size: 26px;
+  font-size: 28px;
   text-align: center;
   margin-top: 20px;
 }
 
 .card__div {
   background-color: rgba(255, 255, 255, 0.806);
+  border: 5px outset hsl(207, 87%, 39%);
   height: 150px;
   margin: 32px 24px 0px 24px;
   display: flex;
   border-radius: 15px;
   align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
 .card__p {
   padding: 10px;
+  font-family: "Odibee Sans", sans-serif;
+  font-size: 18px;
+  color: hsl(207, 87%, 22%);
+}
+
+.card__div2 {
+  margin-top: 22px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card__button {
+  background-color: hsla(207, 87%, 39%, 0.459);
+  font-family: "New Amsterdam", sans-serif;
+  color: hsl(207, 87%, 22%);
+  font-weight: 500;
+  font-size: 13px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.card__button:hover {
+  background-color: hsl(207, 87%, 39%);
+  color: white;
+}
+
+.icon {
+  color: hsl(207, 87%, 22%);
 }
