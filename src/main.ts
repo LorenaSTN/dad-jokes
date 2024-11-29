@@ -1,25 +1,24 @@
 (() =>{
 
-  const paragraph = document.querySelector(".p-js");
-  const button = document.querySelector(".button-js")
+    const paragraph = document.querySelector<HTMLParagraphElement>(".p-js");
+    const button = document.querySelector<HTMLButtonElement>(".button-js");
+    const darkModeButton = document.querySelector<HTMLInputElement>(".darkMode-js");
+
 
 // Api jokes
 
-  const handleJoke = () =>{
+
+const handleJoke = (): void => {
+  if (!paragraph) return;
   fetch("https://icanhazdadjoke.com/", {
-    headers: {
-      Accept: "application/json",
-      "User-Agent": "My App (https://dadJokes.com)",
-    },
+    headers: { Accept: "application/json" },
   })
     .then((response) => response.json())
     .then((data) => {
-      if (paragraph) {
-        paragraph.innerHTML = ` "${data.joke}"`;
-      }
+      paragraph.innerHTML = `"${data.joke}"`;
     })
-    .catch((error) => console.error("Error:", error));
-  }
+    .catch((error) => console.error("Error fetching the joke:", error));
+};
 
     button?.addEventListener("click", handleJoke)
 
@@ -29,27 +28,25 @@
 
 let darkModeEnabled = false;
 
-const darkModeButton = document.querySelector(".darkMode-js");
-
-const handleDarkMode = () =>{
+const handleDarkMode = (): void => {
   darkModeEnabled = !darkModeEnabled
-
   if(darkModeEnabled){
     enableDarkMode()
   }else{
     disableDarkMode()
   }
-}
+};
 
 darkModeButton?.addEventListener("click", handleDarkMode)
 
-const enableDarkMode = () => {
+const enableDarkMode = (): void => {
   document.body.classList.add("dark-mode");
-}
+};
 
-const disableDarkMode = () =>{
+const disableDarkMode = (): void => {
   document.body.classList.remove("dark-mode");
-}
+};
+
 
 })();
 
