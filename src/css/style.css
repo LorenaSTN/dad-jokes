@@ -1,32 +1,87 @@
-main {
-  height: 100%;
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+
+.button input[type="checkbox"] {
+  position: relative;
+  width: 70px;
+  height: 30px;
+  appearance: none;
+  outline: none;
+  border-radius: 20px;
+  box-shadow: inset 0 2px 2px #585858ab;
+  inset: 0 -2px 2px #585858ce;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.button input:checked[type="checkbox"] {
+  background: #222;
+  box-shadow: inset 0 2px 2px #ffffff33;
+  inset: 0 -2px 2px #ffffff33;
+}
+
+.button input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  background: linear-gradient(to bottom, #c7c7c7, #f9f9f9);
+  transition: 0.5s;
+  box-shadow: inset 0 2px 2px #ffffff33, inset 0 -2px 2px #ffffff33;
+}
+
+.button input:checked[type="checkbox"]::before {
+  background: linear-gradient(to bottom, #444, #222);
+  box-shadow: inset 0 2px 2px #ffffff33, inset 0 -2px 2px #ffffff33;
+  transform: translateX(40px);
+}
+
+.section1__div {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
-  min-width: 290px;
-  max-width: 500px;
-  height: 320px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10%;
-  background-color: hsl(207, 87%, 79%);
-  border-radius: 20px;
-  border: 5px outset hsl(207, 87%, 39%);
+  width: 550px;
+  height: 350px;
+  background-color: white;
+  border-bottom: 8px solid hsl(0, 0%, 28%);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-bottom: 60px;
 }
 
 .card__title {
-  color: hsl(207, 87%, 22%);
-  font-family: "New Amsterdam", sans-serif;
-  font-size: 28px;
-  text-align: center;
+  background-color: hsl(207, 87%, 27%);
+  border-bottom: 8px solid hsl(207, 87%, 8%);
+  border-radius: 10px;
+  color: white;
+  font-family: "Francois One", sans-serif;
+  font-size: 40px;
+  width: fit-content;
+  padding: 8px 24px 8px 48px;
   margin-top: 20px;
+  margin-left: -16px;
 }
 
 .card__div {
   background-color: rgba(255, 255, 255, 0.806);
-  border: 5px outset hsl(207, 87%, 39%);
   height: 150px;
-  margin: 32px 24px 0px 24px;
+  margin: 16px 24px 0px 24px;
   display: flex;
   border-radius: 15px;
   align-items: center;
@@ -36,34 +91,40 @@ main {
 
 .card__p {
   padding: 10px;
-  font-family: "Odibee Sans", sans-serif;
+  font-family: "Noto Sans Tamil", sans-serif;
+  font-weight: 250;
   font-size: 18px;
   color: hsl(207, 87%, 22%);
+  /* font-style: italic; */
 }
 
 .card__div2 {
-  margin-top: 22px;
   display: flex;
   justify-content: space-around;
 }
 
 .card__button {
-  background-color: hsla(207, 87%, 39%, 0.459);
-  font-family: "New Amsterdam", sans-serif;
-  color: hsl(207, 87%, 22%);
-  font-weight: 500;
-  font-size: 13px;
-  padding: 4px 8px;
+  background-color: hsl(207, 87%, 27%);
+  font-family: "Noto Sans Tamil", sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 8px 16px;
   border: none;
   border-radius: 15px;
   cursor: pointer;
 }
 
 .card__button:hover {
-  background-color: hsl(207, 87%, 39%);
+  background-color: hsl(207, 87%, 15%);
   color: white;
 }
 
 .icon {
-  color: hsl(207, 87%, 22%);
+  color: hsla(207, 87%, 39%, 0.728);
+  cursor: pointer;
+}
+
+.dark-mode {
+  background-color: #222;
 }
