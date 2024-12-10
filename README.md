@@ -20,11 +20,11 @@ Dad Jokes is a simple web application that lets you brighten your day with rando
 
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/LorenaSTN/Dad-Jokes.git
+   git clone https://github.com/LorenaSTN/dad-jokes.git
 
 2. Navigate to the project directory:
     ```bash
-    cd Dad-Jokes
+    cd dad-jokes
 
 ## Credits 
 
