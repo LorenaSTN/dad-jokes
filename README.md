@@ -10,7 +10,7 @@ Dad Jokes is a simple web application that lets you brighten your day with rando
 
 - Dark Mode: Toggle between light and dark themes to suit your preference.
 
-## Technologies 
+## Technologies
 
 - **HTML5**
 - **CSS3**
@@ -18,8 +18,8 @@ Dad Jokes is a simple web application that lets you brighten your day with rando
 
 ## Installation
 
-1. Clone the repository:  
-   ```bash
+1. Clone the repository:
+  ```bash
    git clone https://github.com/LorenaSTN/dad-jokes.git
 
 2. Navigate to the project directory:
